@@ -50,7 +50,9 @@ router.get(
           "submissions.patient_id",
           "patient_profiles.user_id"
         )
+        //only the clinician the case is assigned to can view it
         .where("cases.id", req.params.id)
+        .andWhere("cases.assigned_clinician_id", req.user.id)
         .select(
           "cases.*",
           "submissions.free_text",
@@ -135,10 +137,17 @@ router.put(
         updates.resolved_at = new Date();
       }
 
+      //only the assigned clinician can update, 404 if not theirs or doesn't exist
       const [updated] = await db("cases")
-        .where({ id: req.params.id })
+        .where({ id: req.params.id, assigned_clinician_id: req.user.id })
         .update(updates)
         .returning("*");
+
+      if (!updated) {
+        return res
+          .status(404)
+          .json({ error: { code: "NOT_FOUND", message: "Case not found" } });
+      }
 
       await audit.log(req.user.id, "CASE_UPDATED", "case", req.params.id, {
         status,
