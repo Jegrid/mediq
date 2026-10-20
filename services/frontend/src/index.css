@@ -1,0 +1,70 @@
+:root {
+  /* text */
+  --color-text-strong: #0f172a;
+  --color-text: #1e293b;
+  --color-text-label: #374151;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-text-subtle: #94a3b8;
+
+  /* surfaces */
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-overlay: rgba(0, 0, 0, 0.1);
+  --shadow-colour: rgba(0, 0, 0, 0.08);
+
+  /* sidebar */
+  --color-sidebar: #0f172a;
+  --color-sidebar-border: #1e293b;
+
+  /* brand + role accents */
+  --color-primary: #0ea5e9;
+  --color-accent-clinician: #10b981;
+  --color-accent-supervisor: #f59e0b;
+
+  /* status */
+  --color-success: #16a34a;
+  --color-success-bg: #dcfce7;
+  --color-warning: #854d0e;
+  --color-warning-bg: #fef9c3;
+  --color-info: #1d4ed8;
+  --color-info-bg: #dbeafe;
+  --color-danger: #dc2626;
+  --color-danger-bg: #fef2f2;
+  --color-high: #c2410c;
+  --color-high-bg: #ffedd5;
+  --color-urgent: #ea580c;
+  --color-urgent-bg: #fff7ed;
+  --color-urgent-border: #fed7aa;
+  --color-urgent-text: #9a3412;
+  --color-referred: #7c3aed;
+  --color-referred-bg: #f3e8ff;
+  --color-risk: #800080;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

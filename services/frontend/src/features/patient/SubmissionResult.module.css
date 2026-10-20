@@ -1,0 +1,216 @@
+.backButton {
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text-strong);
+  margin-bottom: 0.25rem;
+}
+
+.subheading {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+  margin-bottom: 0.75rem;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.freeText {
+  color: var(--color-text-label);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.disclaimer {
+  background-color: var(--color-urgent-bg);
+  border: 1px solid var(--color-urgent-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.825rem;
+  color: var(--color-urgent-text);
+  margin-bottom: 1rem;
+}
+
+.predictionList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.predictionCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.predictionTop {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.predictionRank {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+  min-width: 24px;
+}
+
+.predictionName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+  flex: 1;
+}
+
+.severityBadge {
+  background-color: var(--tone-bg);
+  color: var(--tone-fg);
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.confidenceBar {
+  margin-bottom: 0.75rem;
+}
+
+.confidenceLabel {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.375rem;
+}
+
+.barTrack {
+  background-color: var(--color-surface-alt);
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.barFill {
+  background-color: var(--color-text-subtle);
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.explanation {
+  font-size: 0.825rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.nextSteps {
+  font-size: 0.9rem;
+  color: var(--color-text-label);
+  line-height: 1.6;
+}
+
+.muted {
+  color: var(--color-text-subtle);
+  font-size: 0.875rem;
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: 0.875rem;
+}
+
+.decisionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.decisionBadge {
+  background-color: var(--tone-bg);
+  color: var(--tone-fg);
+  padding: 0.375rem 0.875rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.resolvedDate {
+  font-size: 0.8rem;
+  color: var(--color-text-subtle);
+}
+
+.finalCondition {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  padding: 0.875rem;
+  background-color: var(--color-bg);
+  border-radius: 8px;
+}
+
+.finalConditionLabel {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.finalConditionName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+}
+
+.notesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.notesLabel {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.notesText {
+  font-size: 0.9rem;
+  color: var(--color-text-label);
+  line-height: 1.6;
+}
+
+.barFillTop {
+  background-color: var(--color-primary);
+}

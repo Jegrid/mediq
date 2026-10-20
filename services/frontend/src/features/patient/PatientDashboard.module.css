@@ -1,0 +1,93 @@
+.heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text-strong);
+  margin-bottom: 0.25rem;
+}
+
+.subheading {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.submitButton {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+  margin-bottom: 1rem;
+}
+
+.muted {
+  color: var(--color-text-subtle);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.emptyCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cardDate {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.badge {
+  background-color: var(--tone-bg);
+  color: var(--tone-fg);
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.cardText {
+  font-size: 0.9rem;
+  color: var(--color-text-label);
+  margin-bottom: 0.75rem;
+}
+
+.viewButton {
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0;
+}

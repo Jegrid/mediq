@@ -1,0 +1,163 @@
+.heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text-strong);
+  margin-bottom: 0.25rem;
+}
+
+.subheading {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.error {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+  margin-bottom: 0.75rem;
+}
+
+.selectedCount {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.symptomGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.group {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.groupTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.symptomGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.symptomChip {
+  padding: 0.375rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-text-label);
+  font-size: 0.825rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.symptomChipActive {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.submitButton {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.redFlagPage {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.redFlagBanner {
+  border: 2px solid var(--tone-fg);
+  background-color: var(--tone-bg);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.redFlagTitle {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.redFlagMessage {
+  font-size: 0.95rem;
+  color: var(--color-text-label);
+}
+
+.redirectNote {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.muted {
+  color: var(--color-text-subtle);
+  font-size: 0.875rem;
+}
+
+.riskGroup {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-risk);
+}
+
+.riskGroupTitle {
+  color: var(--color-risk);
+}
+
+.riskChip {
+  background-color: var(--color-surface);
+  border-color: var(--color-risk);
+}
+
+.riskChipActive {
+  background-color: var(--color-risk);
+  border-color: var(--color-risk);
+  color: var(--color-surface);
+}

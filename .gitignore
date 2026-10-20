@@ -1,0 +1,26 @@
+#dependencies
+node_modules/
+
+#environment
+.env
+.env.*
+!.env.example
+
+#build output
+dist/
+coverage/
+
+#python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+#trained model artefacts (regenerate with services/ml/model/train.py)
+services/ml/models/*.pkl
+
+#os / editor
+.DS_Store
+.vscode/
+.idea/
+*.log

@@ -1,0 +1,45 @@
+/* colour tones for badges, banners and buttons, each sets --tone-bg and --tone-fg */
+.success {
+  --tone-bg: var(--color-success-bg);
+  --tone-fg: var(--color-success);
+}
+
+.warning {
+  --tone-bg: var(--color-warning-bg);
+  --tone-fg: var(--color-warning);
+}
+
+.info {
+  --tone-bg: var(--color-info-bg);
+  --tone-fg: var(--color-info);
+}
+
+.danger {
+  --tone-bg: var(--color-danger-bg);
+  --tone-fg: var(--color-danger);
+}
+
+.high {
+  --tone-bg: var(--color-high-bg);
+  --tone-fg: var(--color-high);
+}
+
+.urgent {
+  --tone-bg: var(--color-urgent-bg);
+  --tone-fg: var(--color-urgent);
+}
+
+.referred {
+  --tone-bg: var(--color-referred-bg);
+  --tone-fg: var(--color-referred);
+}
+
+.neutral {
+  --tone-bg: var(--color-surface-alt);
+  --tone-fg: var(--color-text-secondary);
+}
+
+.muted {
+  --tone-bg: var(--color-surface-alt);
+  --tone-fg: var(--color-text-subtle);
+}

@@ -1,0 +1,97 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.patient {
+  --accent: var(--color-primary);
+}
+
+.clinician {
+  --accent: var(--color-accent-clinician);
+}
+
+.supervisor {
+  --accent: var(--color-accent-supervisor);
+}
+
+.sidebar {
+  width: 240px;
+  background-color: var(--color-sidebar);
+  color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.userInfo {
+  padding: 0.75rem 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-sidebar-border);
+}
+
+.userEmail {
+  font-size: 0.8rem;
+  color: var(--color-text-subtle);
+  margin-bottom: 0.25rem;
+  word-break: break-all;
+}
+
+.userRole {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.navItem {
+  padding: 0.625rem 0.75rem;
+  border-radius: 8px;
+  color: var(--color-text-subtle);
+  font-size: 0.9rem;
+  transition: all 0.15s;
+}
+
+.navItemActive {
+  background-color: var(--color-sidebar-border);
+  color: var(--color-surface);
+}
+
+.main {
+  margin-left: 240px;
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+.logout {
+  background-color: transparent;
+  border: 1px solid var(--color-sidebar-border);
+  color: var(--color-text-subtle);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  text-align: left;
+  margin-top: auto;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "mediq",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm --prefix services/backend install && npm --prefix services/frontend install && npm run setup:ml",
+    "setup:ml": "cd services/ml && ${PYTHON:-python3} -m venv .venv && .venv/bin/python -m pip install -r requirements.txt",
+    "dev": "concurrently -n backend,frontend,ml -c blue,green,magenta \"npm --prefix services/backend run dev\" \"npm --prefix services/frontend run dev\" \"npm run dev:ml\"",
+    "dev:ml": "cd services/ml && .venv/bin/python -m uvicorn main:app --reload --port 8000",
+    "train:ml": "cd services/ml && .venv/bin/python model/train.py",
+    "db:migrate": "npm --prefix services/backend run migrate",
+    "db:seed": "npm --prefix services/backend run seed",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "prettier": "^3.9.10"
+  }
+}
