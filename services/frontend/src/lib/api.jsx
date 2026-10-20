@@ -1,7 +1,10 @@
 import axios from "axios";
 
+//backend url comes from VITE_API_URL, falls back to local dev
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
+
 const api = axios.create({
-  baseURL: "http://localhost:4000/api/v1",
+  baseURL: `${API_URL}/api/v1`,
 });
 
 api.interceptors.request.use((config) => {

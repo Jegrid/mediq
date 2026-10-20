@@ -16,7 +16,11 @@ const supervisorRoutes = require("./routes/supervisor");
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.use(cors());
+//only allow requests from the frontend, comma separate for multiple origins
+const allowedOrigins = (process.env.CORS_ORIGIN || "http://localhost:5173")
+  .split(",")
+  .map((origin) => origin.trim());
+app.use(cors({ origin: allowedOrigins }));
 app.use(express.json());
 
 app.get("/health", (req, res) => {
