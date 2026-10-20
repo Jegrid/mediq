@@ -8,6 +8,7 @@
     "dev": "concurrently -n backend,frontend,ml -c blue,green,magenta \"npm --prefix services/backend run dev\" \"npm --prefix services/frontend run dev\" \"npm run dev:ml\"",
     "dev:ml": "cd services/ml && .venv/bin/python -m uvicorn main:app --reload --port 8000",
     "train:ml": "cd services/ml && .venv/bin/python model/train.py",
+    "evaluate:ml": "cd services/ml && .venv/bin/python model/evaluate.py",
     "db:migrate": "npm --prefix services/backend run migrate",
     "db:seed": "npm --prefix services/backend run seed",
     "format": "prettier --write .",
