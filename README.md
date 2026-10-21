@@ -141,7 +141,7 @@ cd services/backend
 npm test
 ```
 
-47 Jest tests cover JWT handling, input validation and red-flag checks, plus integration tests for the auth, submission and case endpoints using Supertest. They run against the separate test database in `TEST_DATABASE_URL`.
+48 Jest tests cover JWT handling, input validation and red-flag checks, plus integration tests for the auth, submission and case endpoints using Supertest. They run against the separate test database in `TEST_DATABASE_URL`.
 
 ## Limitations and next steps
 

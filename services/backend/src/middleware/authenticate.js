@@ -1,6 +1,7 @@
 const { verifyToken } = require("../lib/jwt");
+const db = require("../db");
 
-function authenticate(req, res, next) {
+async function authenticate(req, res, next) {
   const header = req.headers.authorization;
   if (!header || !header.startsWith("Bearer ")) {
     return res
@@ -9,14 +10,32 @@ function authenticate(req, res, next) {
   }
 
   const token = header.split(" ")[1];
+  let payload;
   try {
-    req.user = verifyToken(token);
-    next();
+    payload = verifyToken(token);
   } catch {
     return res.status(401).json({
       error: { code: "UNAUTHORISED", message: "Invalid or expired token" },
     });
   }
+
+  //check the account still exists and hasn't been disabled since the token was issued
+  try {
+    const user = await db("users")
+      .where({ id: payload.id })
+      .select("is_active")
+      .first();
+    if (!user || !user.is_active) {
+      return res.status(401).json({
+        error: { code: "ACCOUNT_DISABLED", message: "Account is disabled" },
+      });
+    }
+  } catch (err) {
+    return next(err);
+  }
+
+  req.user = payload;
+  next();
 }
 
 module.exports = authenticate;

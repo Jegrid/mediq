@@ -127,4 +127,17 @@ describe("GET /api/v1/auth/me", () => {
 
     expect(res.status).toBe(401);
   });
+
+  test("returns 401 once the account is disabled", async () => {
+    await db("users")
+      .where({ email: "newpatient@test.com" })
+      .update({ is_active: false });
+
+    const res = await request(app)
+      .get("/api/v1/auth/me")
+      .set("Authorization", `Bearer ${token}`);
+
+    expect(res.status).toBe(401);
+    expect(res.body.error.code).toBe("ACCOUNT_DISABLED");
+  });
 });
