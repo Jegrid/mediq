@@ -45,6 +45,13 @@ app.get("/api/v1/conditions", authenticate, async (req, res, next) => {
   }
 });
 
+//any route that doesn't exist gets the same json error shape as the rest of the api
+app.use((req, res) => {
+  res
+    .status(404)
+    .json({ error: { code: "NOT_FOUND", message: "Route not found" } });
+});
+
 app.use(errorHandler);
 
 if (process.env.NODE_ENV !== "test") {
