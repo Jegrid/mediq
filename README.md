@@ -18,7 +18,7 @@ The idea was a triage tool that keeps a clinician in the loop. The model gives a
 2. The backend checks them against red-flag rules (e.g. chest pain) and shows an urgent warning straight away if one matches.
 3. The ML service predicts the three most likely conditions with a confidence score for each.
 4. A supervisor assigns the submission to a clinician as a case.
-5. The clinician reviews it, confirms or overrides the prediction, and records a final condition and notes.
+5. The clinician reviews it and either confirms the prediction, overrides it with a different condition, or marks it inconclusive, and adds notes.
 6. The patient sees the clinician's decision on their results page.
 
 There are three roles, each with its own dashboard.
@@ -36,7 +36,7 @@ There are three roles, each with its own dashboard.
 
 - See their assigned cases and filter them by status
 - Open a case to see the patient's profile, symptoms and the model's predictions
-- Confirm or override the prediction, set the final condition and add notes
+- Confirm the prediction, override it with a different condition, or mark it inconclusive, and add notes
 
 ### Supervisors
 
