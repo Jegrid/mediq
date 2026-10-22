@@ -11,7 +11,8 @@ symptom_list = joblib.load(os.path.join(MODELS_DIR, 'symptom_list.pkl'))
 
 
 #buidl keyword lookip, map phrase to canonical term
-KEYWORD_MAP = {symptom.replace('_', ' ').lower(): symptom for symptom in symptom_list}
+#split/join collapses double spaces, some dataset names have stray spaces e.g. "dischromic _patches"
+KEYWORD_MAP = {' '.join(symptom.replace('_', ' ').lower().split()): symptom for symptom in symptom_list}
 
 def extract_symptoms_from_text(text: str) -> list:
     if not text:
@@ -20,6 +21,7 @@ def extract_symptoms_from_text(text: str) -> list:
     #to lower and strip punct
     cleaned = text.lower()
     cleaned = re.sub(r'[^a-z\s]', '', cleaned)
+    cleaned = ' '.join(cleaned.split())
 
     matched = []
     for phrase, canonical in KEYWORD_MAP.items():
