@@ -1,6 +1,7 @@
 const bcrypt = require("bcryptjs");
 const db = require("../db");
 const { signToken } = require("../lib/jwt");
+const { z } = require("zod");
 const { registerSchema, loginSchema } = require("../validation/auth");
 const audit = require("../lib/audit");
 
@@ -15,7 +16,7 @@ async function register(req, res, next) {
         error: {
           code: "VALIDATION_ERROR",
           message: "Invalid input",
-          details: parsed.error.flatten(),
+          details: z.flattenError(parsed.error),
         },
       });
     }
