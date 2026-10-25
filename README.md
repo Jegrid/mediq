@@ -14,6 +14,16 @@ Demo logins for the patient and clinician roles are available on request.
 
 It runs on free hosting (Vercel for the frontend, Render for the API and ML service, Neon for the database), so if nobody has used it for a while the first request can take about a minute while the services wake up.
 
+## Screenshots
+
+| Patient results                                                                       | Clinician case review                                                |
+| ------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| ![Patient results with ranked predictions](docs/screenshots/patient-results.png)      | ![Clinician reviewing a case](docs/screenshots/clinician-case.png)   |
+| **Clinician decision shown to the patient**                                           | **Supervisor user management**                                       |
+| ![Patient results with the clinician's decision](docs/screenshots/patient-review.png) | ![Supervisor user management](docs/screenshots/supervisor-users.png) |
+
+<img src="docs/screenshots/mobile-results.png" alt="Patient results on mobile" width="280">
+
 ## About the project
 
 This was a two-semester project, so close to a year of work. There was a lot of trial and error along the way, learning new frameworks and working out how to approach problems as they came up. I'm proud of how it turned out.
