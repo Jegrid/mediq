@@ -11,6 +11,7 @@
     "evaluate:ml": "cd services/ml && .venv/bin/python model/evaluate.py",
     "db:migrate": "npm --prefix services/backend run migrate",
     "db:seed": "npm --prefix services/backend run seed",
+    "demo:reset": "npm --prefix services/backend run demo:reset",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

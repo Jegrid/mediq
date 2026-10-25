@@ -7,7 +7,8 @@
     "start": "node src/index.js",
     "migrate": "knex migrate:latest --knexfile src/db/knexfile.js",
     "seed": "knex seed:run --knexfile src/db/knexfile.js",
-    "test": "jest --runInBand --forceExit"
+    "test": "jest --runInBand --forceExit",
+    "demo:reset": "node scripts/resetDemo.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
