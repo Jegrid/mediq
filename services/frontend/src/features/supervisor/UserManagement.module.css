@@ -179,3 +179,29 @@
   color: var(--color-text-subtle);
   font-size: 0.875rem;
 }
+
+/* mobile */
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tableHeader {
+    display: none;
+  }
+
+  .tableRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .userName,
+  .userEmail {
+    flex-basis: 100%;
+  }
+
+  .toggleButton {
+    margin-left: auto;
+  }
+}

@@ -40,3 +40,18 @@
   color: var(--color-text-subtle);
   font-size: 0.875rem;
 }
+
+/* mobile */
+@media (max-width: 767px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .statCard {
+    padding: 1rem;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+}

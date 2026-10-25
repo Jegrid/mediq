@@ -74,3 +74,20 @@
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
+
+/* mobile */
+@media (max-width: 767px) {
+  .tableHeader {
+    display: none;
+  }
+
+  .tableRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+  }
+
+  .timestamp {
+    flex-basis: 100%;
+  }
+}
