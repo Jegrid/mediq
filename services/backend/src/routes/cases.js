@@ -92,27 +92,6 @@ router.get(
   }
 );
 
-router.post(
-  "/",
-  authenticate,
-  authorise("supervisor"),
-  async (req, res, next) => {
-    try {
-      const { submission_id, assigned_clinician_id } = req.body;
-      const [newCase] = await db("cases")
-        .insert({
-          submission_id,
-          assigned_clinician_id,
-          status: "open",
-        })
-        .returning("*");
-      res.status(201).json({ case: newCase });
-    } catch (err) {
-      next(err);
-    }
-  }
-);
-
 router.put(
   "/:id",
   authenticate,
