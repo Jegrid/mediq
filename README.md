@@ -6,6 +6,14 @@ Final year project for my BSc (Hons) Computer Science with Web Development at No
 
 > MedIQ is a university project, not a medical device. Its predictions are not a diagnosis.
 
+## Live demo
+
+**[mediq-black.vercel.app](https://mediq-black.vercel.app)**
+
+Demo logins for the patient and clinician roles are available on request.
+
+It runs on free hosting (Vercel for the frontend, Render for the API and ML service, Neon for the database), so if nobody has used it for a while the first request can take about a minute while the services wake up.
+
 ## About the project
 
 This was a two-semester project, so close to a year of work. There was a lot of trial and error along the way, learning new frameworks and working out how to approach problems as they came up. I'm proud of how it turned out.
@@ -126,7 +134,7 @@ npm run train:ml
 npm run dev
 ```
 
-The app runs at http://localhost:5173. The seed script creates these accounts:
+The app runs at http://localhost:5173. The seed script creates these accounts (the live demo uses different passwords):
 
 | Role       | Email                | Password     |
 | ---------- | -------------------- | ------------ |
