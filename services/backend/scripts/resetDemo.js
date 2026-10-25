@@ -22,6 +22,19 @@ if (!DATABASE_URL || !DEMO_SUPERVISOR_PASSWORD || !DEMO_USER_PASSWORD) {
   process.exit(1);
 }
 
+//an unquoted # in .env starts a comment, so make sure the passwords weren't cut short
+const rawLines = fs.readFileSync(envFile, "utf8").split("\n");
+for (const key of ["DEMO_SUPERVISOR_PASSWORD", "DEMO_USER_PASSWORD"]) {
+  const line = rawLines.find((l) => l.startsWith(`${key}=`)) || "";
+  const raw = line.slice(key.length + 1).trim();
+  if (raw.includes("#") && !/^["'].*["']$/.test(raw)) {
+    console.error(
+      `${key} contains a #, wrap the value in double quotes in .env.demo`
+    );
+    process.exit(1);
+  }
+}
+
 const bcrypt = require("bcryptjs");
 const db = require("../src/db");
 
