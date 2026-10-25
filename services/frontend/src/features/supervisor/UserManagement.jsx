@@ -200,21 +200,38 @@ export default function UserManagement() {
 
       <div className={styles.table}>
         <div className={styles.tableHeader}>
-          <span>Name</span>
-          <span>Email</span>
+          <span>User</span>
           <span>Role</span>
           <span>Status</span>
-          <span>Actions</span>
+          <span className={styles.actionsHeader}>Actions</span>
         </div>
         {users.map((user) => {
+          const name =
+            user.first_name && user.last_name
+              ? `${user.first_name} ${user.last_name}`
+              : null;
+          //initials from the name, or the first letter of the email if there isn't one
+          const initials = name
+            ? `${user.first_name[0]}${user.last_name[0]}`
+            : user.email[0];
           return (
             <div key={user.id} className={styles.tableRow}>
-              <span className={styles.userName}>
-                {user.first_name && user.last_name
-                  ? `${user.first_name} ${user.last_name}`
-                  : "—"}
-              </span>
-              <span className={styles.userEmail}>{user.email}</span>
+              <div className={styles.userCell}>
+                <span
+                  className={cx(
+                    styles.avatar,
+                    tone(roleTone[user.role], "info")
+                  )}
+                >
+                  {initials}
+                </span>
+                <div>
+                  <div className={cx(styles.userName, !name && styles.noName)}>
+                    {name || "No name"}
+                  </div>
+                  <div className={styles.userEmail}>{user.email}</div>
+                </div>
+              </div>
               <span
                 className={cx(
                   styles.roleBadge,
@@ -225,7 +242,7 @@ export default function UserManagement() {
               </span>
               <span
                 className={cx(
-                  styles.statusBadge,
+                  styles.status,
                   tone(user.is_active ? "success" : "danger")
                 )}
               >
