@@ -22,7 +22,10 @@ It runs on free hosting (Vercel for the frontend, Render for the API and ML serv
 | **Clinician decision shown to the patient**                                           | **Supervisor user management**                                       |
 | ![Patient results with the clinician's decision](docs/screenshots/patient-review.png) | ![Supervisor user management](docs/screenshots/supervisor-users.png) |
 
-<img src="docs/screenshots/mobile-results.png" alt="Patient results on mobile" width="280">
+<p align="center">
+  <img src="docs/screenshots/mobile-results.png" alt="Patient results on mobile" width="280"><br>
+  <b>On mobile</b>
+</p>
 
 ## About the project
 
