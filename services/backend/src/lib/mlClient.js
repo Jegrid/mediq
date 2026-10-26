@@ -27,4 +27,9 @@ async function getPredictions({ freeText, structuredSymptoms }) {
   return response.json();
 }
 
-module.exports = { getPredictions };
+//hit the health route so a sleeping ml service starts up, result doesn't matter
+function wakeMlService() {
+  fetch(`${ML_URL}/health`).catch(() => {});
+}
+
+module.exports = { getPredictions, wakeMlService };

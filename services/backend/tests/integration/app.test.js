@@ -12,3 +12,12 @@ describe("unknown routes", () => {
     expect(res.body.error.code).toBe("NOT_FOUND");
   });
 });
+
+describe("GET /warmup", () => {
+  test("responds straight away without waiting on the database or ml service", async () => {
+    const res = await request(app).get("/warmup");
+
+    expect(res.status).toBe(200);
+    expect(res.body.status).toBe("ok");
+  });
+});

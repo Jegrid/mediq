@@ -4,6 +4,7 @@ const cors = require("cors");
 const db = require("./db");
 const authenticate = require("./middleware/authenticate");
 const errorHandler = require("./middleware/errorHandler");
+const { wakeMlService } = require("./lib/mlClient");
 const authRoutes = require("./routes/auth");
 const submissionRoutes = require("./routes/submissions");
 const journalRoutes = require("./routes/journal");
@@ -25,6 +26,13 @@ app.use(express.json());
 
 app.get("/health", (req, res) => {
   res.json({ status: "ok", service: "mediq-backend" });
+});
+
+//frontend calls this on load so the database and ml service wake up before they're needed
+app.get("/warmup", (req, res) => {
+  db.raw("select 1").catch(() => {});
+  wakeMlService();
+  res.json({ status: "ok" });
 });
 
 app.use("/api/v1/auth", authRoutes);
